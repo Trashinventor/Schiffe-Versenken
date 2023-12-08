@@ -43,6 +43,20 @@ library mit den Funktionen für GUI, Menu & Userinput für das Spiel "Schiffe ve
   |int|player2points|Punktestand von Spieler 2|
   |char[]|spielfeld1[]|Array mit den Zeichen pro Feld -> für eigenes Spielfeld |
   |char[]|spielfeld2[]|Array mit den Zeichen pro Feld -> für Bereits beschossene gegnerische Felder |
+  ||Intkoordinaten||
+  ||Intrichtung||
+  ||schiffslaenge||
+  ||X||
+  ||Y||
+  ||text[]||
+  ||zeile||
+  ||sonderzeichen||
+  ||color[]||
+  ||heigth||
+  ||width||
+  ||starttime||
+  ||countdownlength||
+  
   
   
 ### Erklärung weiterer einzelner Parameter
@@ -54,8 +68,18 @@ library mit den Funktionen für GUI, Menu & Userinput für das Spiel "Schiffe ve
   |2|Schwierigkeit|
   |3|Spielanleitung|
 
-  |**Wert von "bla"**|**Beschreibung**|
-  |-------------------|----------------|
+  |**Wert von "color[]"**|**Beschreibung**|**code**|
+  |----------------------|----------------|--------|
+  |COLOR_YELLOW_BOLD |gelber, dicker Text|`"\033[1;33m"`|
+  |COLOR_RED_BOLD|roter, dicker Text|`"\033[1;31m"`|
+  |COLOR_BRIGHT_BLUE|hellblauer, normaler Text|`"\e[94m"`|
+  |COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE|hellblauer, dicker, blinkender Text|`"\e[1;5;94m"`|
+  |END_TEXT|zurücksetzen auf hellblauen, normalen Text (nach der Formatierung eines Textes notwendig)| `"\033[m""\033[94m"`|
+  |UEBERSCHRIFT|dicker, unterstrichener Text (für Überschriften)| `"\e[1;4m"`|
+  |BOLD|dicker Text|`"\033[1m"`|
+  
+  
+  
 
   
 
