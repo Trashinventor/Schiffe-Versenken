@@ -137,7 +137,7 @@ void startupscreen(){
 }
 
 //Darstellung des Spielfelds
-int spielfeld(char* timePassed, int difficulty, int player1_points, int player2_points, char spielfeld1[], char spielfeld2[]){
+int spielfeld(char* timePassed, int player1_points, int player2_points, char spielfeld1[], char spielfeld2[]){
     
     system("cls");
     CONSOLE_SCREEN_BUFFER_INFO Screen;
@@ -549,7 +549,7 @@ void UserInput(){
         a:
         system("cls");
         
-        spielfeld(timePassed,settings.difficulty,player1points,player2points,spielfeld1,spielfeld2);
+        spielfeld(timePassed,player1points,player2points,spielfeld1,spielfeld2);
         CONSOLE_SCREEN_BUFFER_INFO Screen;
         WORD wOldColAttr;
         HANDLE hStdOut;

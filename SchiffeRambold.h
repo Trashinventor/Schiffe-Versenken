@@ -26,7 +26,7 @@ extern void test(void);
 extern void startupscreen(void);
 void wait(unsigned int);
 int menuPrint(int);
-int spielfeld(char*, int, int, int, char*, char*);
+int spielfeld(char*, int, int, char*, char*);
 int menu(void);
 char* timer(time_t);
 void SchiffSetzen(int, int, int, char*);

@@ -48,7 +48,7 @@ int main(void){
             while(1){
                 //WIE CLOCK IN KONSOLE UPDATEN OHNE USERINPUT ZU BEEINFLUSSEN?
                 char* gametime = timer(spielbegin);
-                spielfeld(gametime,settings.difficulty,player1points,player2points,spielfeld1,spielfeld2);
+                spielfeld(gametime,player1points,player2points,spielfeld1,spielfeld2);
                 getch();
                 system("cls");
             }
@@ -67,7 +67,7 @@ int main(void){
                 countdowntime.sec = 10;
                 time_t startvalue = (countdowntime.sec + (countdowntime.min * 60));  
                 char* gametime = Countdown(spielbegin,startvalue);
-                spielfeld(gametime,settings.difficulty,player1points,player2points,spielfeld1,spielfeld2);
+                spielfeld(gametime,player1points,player2points,spielfeld1,spielfeld2);
                 if(strcmp(gametime,"00:00")==0){
                     getch();
                     goto start;   
