@@ -1,10 +1,17 @@
 # Schiffe-Versenken
 
 ## config:
-default-Einstellungen für Spiel
-  - Anzahl der Schiffe
-  - default Schwierigkeit
-  - default Spielmodus
+default-Einstellungen für "Schiffe versenken"
+
+  |**Einstellung**|**Wert**|**Beschreibung**|
+  |---------------|--------|----------------|
+  |difficulty|2|default Schwierigkeit|
+  |gamemode|1|default Spielmodus|
+  |anzahl.Minensuchboote|4|default Anzahl der Minensuchboote|
+  |anzahl.Fregatten|4|default Anzahl der Fregatten|
+  |anzahl.Kreuzer|2|default Anzahl der Kreuzer|
+  |anzahl.Schlachtschiffe|2|default Anzahl der Schlachtschiffe|
+  
 
 ## SchiffeRambold:
 library mit den Funktionen für GUI, Menu & Userinput für das Spiel "Schiffe versenken"
@@ -33,31 +40,31 @@ library mit den Funktionen für GUI, Menu & Userinput für das Spiel "Schiffe ve
 |**UserInput()**|gesamte Platzierung der Schiffe durch Benutzer|
 |**test()**|Funktion zum testen der Library (Überbleibsel aus der Entwicklung), gibt "TEST FUNCTION" aus|
 
+
 ### Erklärung der Parameter
 
   |**Datentyp**|**Parameter**|**Beschreibung**|
   |-------------|------------|----------------|
   |unsigned int|seconds|Zeit in Sekunden|
   |char*|timePassed|vergangene Zeit seit Spielbeginn|
-  |int|player1points|Punktestand von Spieler 1|
-  |int|player2points|Punktestand von Spieler 2|
+  |int|player1points|eigener Punktestand|
+  |int|player2points|gegnerischer Punktestand|
   |char[]|spielfeld1[]|Array mit den Zeichen pro Feld -> für eigenes Spielfeld |
   |char[]|spielfeld2[]|Array mit den Zeichen pro Feld -> für Bereits beschossene gegnerische Felder |
-  ||Intkoordinaten||
-  ||Intrichtung||
-  ||schiffslaenge||
-  ||X||
-  ||Y||
-  ||text[]||
-  ||zeile||
-  ||sonderzeichen||
-  ||color[]||
-  ||heigth||
-  ||width||
-  ||starttime||
-  ||countdownlength||
-  
-  
+  |int|Intkoordinaten|Koordinaten des ersten Schiffsfeldes in Arrayform (Feld Nr. 0-99)|
+  |int|Intrichtung|Orientierung des Schiffs in Zahlen (1-4 im Uhrzeigersinn beginnend bei Norden)|
+  |int|schiffslaenge|Länge des Schiffs in Feldern|
+  |char|X|X-Anteil der Koordinaten (A-J)|
+  |int|Y|Y-Anteil der Koordinaten (1-10)|
+  |char|text[]|zu positionieren- und formatierender Text|
+  |short|zeile|Zeilennummer im cmd-Fenster|
+  |int|sonderzeichen|Anzahl eventueller Sonderzeichen die bei *strlen()* mitgezählt aber nicht angezeigt werden|
+  |char|color[]|siehe unten|
+  |int|heigth|Höhe der zu zeichnenden Box in Zeilen|
+  |int|width|Breite der zu zeichnenden Box in Zeichen|
+  |time_t|starttime|Zeit zu Beginn des Spiels|
+  |time_t|countdownlength|Länge des Countdowns|
+
   
 ### Erklärung weiterer einzelner Parameter
 
@@ -67,6 +74,7 @@ library mit den Funktionen für GUI, Menu & Userinput für das Spiel "Schiffe ve
   |1|Spielmodus|
   |2|Schwierigkeit|
   |3|Spielanleitung|
+  
 
   |**Wert von "color[]"**|**Beschreibung**|**code**|
   |----------------------|----------------|--------|
