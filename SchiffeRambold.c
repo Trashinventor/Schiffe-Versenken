@@ -268,7 +268,7 @@ int checkPos(int schiffslaenge, int Intrichtung, int Intkoordinaten, char spielf
     // Ost
     case 2:
         for (int i = 0; i < schiffslaenge; i++) {
-            if ((spielfeld1[Intkoordinaten + i] == 'X')||((10-((Intkoordinaten+1)%10))<schiffslaenge)) {
+            if ((spielfeld1[Intkoordinaten + i] == 'X')||((10-((Intkoordinaten)%10))<schiffslaenge)) {
                 return 0; // Nicht platzierbar
             }
         }
@@ -288,7 +288,7 @@ int checkPos(int schiffslaenge, int Intrichtung, int Intkoordinaten, char spielf
     // West
     case 4:
         for (int i = 0; i < schiffslaenge; i++) {
-            if ((spielfeld1[Intkoordinaten - i] == 'X')||(((Intkoordinaten+1)%10)<=schiffslaenge)) {
+            if ((spielfeld1[Intkoordinaten - i] == 'X')||(((Intkoordinaten)%10)<=schiffslaenge)) {
                 return 0; // Nicht platzierbar
             }
         }

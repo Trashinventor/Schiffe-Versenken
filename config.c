@@ -3,10 +3,10 @@
 //default-Einstellungen für Game
 struct setting settings = {
 
-    .anzahl.Minensuchboote = 0,
-    .anzahl.Fregatten = 0,
-    .anzahl.Kreuzer = 0,
-    .anzahl.Schlachtschiffe = 1,
+    .anzahl.Minensuchboote = 4,
+    .anzahl.Fregatten = 4,
+    .anzahl.Kreuzer = 2,
+    .anzahl.Schlachtschiffe = 2,
     .difficulty=2,
     .gamemode=1
 };
