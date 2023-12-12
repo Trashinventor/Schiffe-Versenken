@@ -36,7 +36,7 @@ library mit den Funktionen für GUI, Menu & Userinput für das Spiel "Schiffe ve
 |**Countdown(** *starttime, countdownlength* **)**|Countdown für den Zeitmodus|
 |**Winnerscreen()**|Wird bei gewinnen des Spiels ausgegeben, ASCII-Art Schriftzug "SIEG"|
 |**Loserscreen()**|Wird bei verlieren des Spiels ausgegeben, ASCII-Art Schriftzug "NIEDERLAGE"|
-|**undecidedScreen()**|Wird bei unentschiedenem Spiel ausgegeben, ASCII-Art Schriftzug "UNENTSCHIEDEN|
+|**undecidedScreen()**|Wird bei unentschiedenem Spiel ausgegeben, ASCII-Art Schriftzug "UNENTSCHIEDEN"|
 |**initSpielfeld()**|Initialisierung des Spielfelds zu Spielbeginn|
 |**UserInput()**|gesamte Platzierung der Schiffe durch Benutzer|
 |**test()**|Funktion zum testen der Library (Überbleibsel aus der Entwicklung), gibt "TEST FUNCTION" aus|
