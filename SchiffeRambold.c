@@ -534,6 +534,47 @@ void LoserScreen(){
     //Hier noch Punkte, Zeit anzeigen
 }
 
+//Wird bei unentschieden ausgegeben
+void undecidedScreen(){
+    CONSOLE_SCREEN_BUFFER_INFO Screen;
+    WORD wOldColAttr;
+    HANDLE hStdOut;
+    hStdOut = GetStdHandle (STD_OUTPUT_HANDLE);
+    GetConsoleScreenBufferInfo (hStdOut, &Screen);
+    wOldColAttr = Screen.wAttributes;
+    
+    drawBox(Screen.dwSize.Y-1,Screen.dwSize.X);
+
+    COORD Cursor;
+    Cursor.Y=(Screen.dwSize.Y/2)-7;
+
+    TextCentered("                                           __    __  .__   __.                                             ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("                                          |  |  |  | |  \\ |  |                                             ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("                                          |  |  |  | |   \\|  |  ______                                     ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("                                          |  |  |  | |  . `  | |______|                                    ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("                                          |  `--'  | |  |\\   |                                             ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("                                           \\______/  |__| \\__|                                             ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y+=2;
+    TextCentered(" _______ .__   __. .___________.    _______.  ______  __    __   __   _______  _______   _______ .__   __. ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("|   ____||  \\ |  | |           |   /       | /      ||  |  |  | |  | |   ____||       \\ |   ____||  \\ |  | ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("|  |__   |   \\|  | `---|  |----`  |   (----`|  ,----'|  |__|  | |  | |  |__   |  .--.  ||  |__   |   \\|  | ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("|   __|  |  . `  |     |  |        \\   \\    |  |     |   __   | |  | |   __|  |  |  |  ||   __|  |  . `  | ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("|  |____ |  |\\   |     |  |    .----)   |   |  `----.|  |  |  | |  | |  |____ |  '--'  ||  |____ |  |\\   | ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE);
+    Cursor.Y++;
+    TextCentered("|_______||__| \\__|     |__|    |_______/     \\______||__|  |__| |__| |_______||_______/ |_______||__| \\__| ",Cursor.Y,0,COLOR_BOLD_SLOW_BLINKING_BRIGHT_BLUE); 
+
+    //Hier noch Punkte, Zeit anzeigen
+}
+
 //Funktion zum testen der Library
 void test(){
     printf("\nTEST FUNCTION");

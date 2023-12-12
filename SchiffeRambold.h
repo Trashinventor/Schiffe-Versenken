@@ -41,6 +41,7 @@ void WinnerScreen(void);
 void LoserScreen(void);
 void initSpielfeld(void);
 void UserInput();
+void undecidedScreen(void);
 
 #ifdef __cplusplus
 }
